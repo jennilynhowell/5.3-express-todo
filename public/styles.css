@@ -1,0 +1,38 @@
+.outstanding {
+  width: 45%;
+  float: left;
+}
+
+.completed {
+  width: 45%;
+  float: right;
+}
+
+.new-item-field {
+  width: 40%;
+}
+
+input[type=checkbox] {
+  display: inline;
+  width: 20px;
+  margin-right: 2%;
+}
+
+label {
+  display: inline;
+  width: 40px;
+  margin-bottom: 10px;
+}
+
+#submit-completed {
+  margin-top: 10px;
+  width: 25%;
+}
+
+.list-unstyled {
+  font-weight: 700;
+}
+
+.list-unstyled span {
+  margin-right: 2%;
+}

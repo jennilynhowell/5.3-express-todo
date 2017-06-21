@@ -1,0 +1,21 @@
+{
+  "name": "5.3-todo-list",
+  "version": "1.0.0",
+  "description": "To-do list using express",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "express",
+    "node",
+    "mustache"
+  ],
+  "author": "Jennilyn Howell",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "mustache-express": "^1.2.4"
+  }
+}

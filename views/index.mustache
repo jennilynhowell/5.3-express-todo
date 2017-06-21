@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My To-Do List</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="public/styles.css">
+  </head>
+  <body class="container">
+    <div class="container">
+      <h1>My To-Do List</h1>
+      <h3>Add an Item: </h3>
+      <form class="form-inline" action="/" method="post">
+        <input type="text" name="new-item-field" value="" placeholder="Add a to-do item" class="form-control new-item-field">
+        <input type="submit" name="submit-item" value="Add it!" class="btn btn-primary submit-item">
+      </form>
+    </div>
+
+    <div class="container outstanding">
+      <h3>Outstanding Items</h3>
+      <form class="form-group" action="/" method="post">
+          {{#todoArray}}
+          {{^complete}}
+          <label>
+            <input type="checkbox" name="complete-item" value="{{item}}" class="form-control">{{item}}<br>
+          </label>
+
+          {{/complete}}
+          {{/todoArray}}
+
+          <input type="submit" name="submit-completed" value="Update" class="form-control btn btn-primary" id="submit-completed">
+      </form>
+    </div>
+
+    <div class="container completed">
+      <h3>Completed Items</h3>
+      <h5>Way to go!</h5>
+      <ul class="list-unstyled">
+        {{#todoArray}}
+        {{#complete}}
+        <li><span class="glyphicon glyphicon-check"></span>{{item}}</li>
+        {{/complete}}
+        {{/todoArray}}
+      </ul>
+
+    </div>
+
+
+
+  </body>
+</html>
